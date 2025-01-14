@@ -3,7 +3,7 @@ import logoWhite from "../../assets/logo_white.png";
 
 const Navbar = () => {
   return (
-    <div className="fixed z-20 flex items-center justify-center w-full bg-primary">
+    <div className="fixed z-20 flex items-center justify-center w-full shadow-xl bg-primary bg-opacity-90">
       <div className="container flex items-center justify-between p-4 text-white">
         <Link to="/" className="flex items-center">
           <img src={logoWhite} alt="logo" className="h-16" />
