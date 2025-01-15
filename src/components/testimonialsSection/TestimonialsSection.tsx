@@ -7,14 +7,14 @@ const TestimonialsSection = () => {
         <h4 className="text-5xl font-medium text-primary">
           Que dicen nuestros clientes
         </h4>
-        <div className="flex items-center justify-center w-full gap-10 text-white">
-          <div className="flex flex-col items-center p-4 shadow-2xl bg-primary rounded-2xl h-80 justify-evenly w-80">
+        <div className="flex items-center justify-center w-full gap-10 text-black">
+          <div className="flex flex-col items-center gap-10 p-4 bg-transparent justify-evenly w-80">
             <img
               src={user1}
               alt="Shoes"
-              className="object-cover object-center w-24 h-24 rounded-full"
+              className="object-cover object-center w-40 h-40 border-2 rounded-full shadow-xl border-primary"
             />
-            <div className="flex flex-col items-center gap-5 text-lg text-center">
+            <div className="flex flex-col items-center gap-4 text-lg text-center">
               <p className="text-sm">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit, Lorem
                 ipsum dolor sit, amet consectetur adipisicing elit
@@ -22,13 +22,13 @@ const TestimonialsSection = () => {
               <p className="text-xl font-semibold">Lorem ipsum</p>
             </div>
           </div>
-          <div className="flex flex-col items-center p-4 shadow-2xl bg-primary rounded-2xl h-80 justify-evenly w-80">
+          <div className="flex flex-col items-center gap-10 p-4 bg-transparent justify-evenly w-80">
             <img
               src={user1}
               alt="Shoes"
-              className="object-cover object-center w-24 h-24 rounded-full"
+              className="object-cover object-center w-40 h-40 border-2 rounded-full shadow-xl border-primary"
             />
-            <div className="flex flex-col items-center gap-5 text-lg text-center">
+            <div className="flex flex-col items-center gap-4 text-lg text-center">
               <p className="text-sm">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit, Lorem
                 ipsum dolor sit, amet consectetur adipisicing elit
@@ -36,13 +36,13 @@ const TestimonialsSection = () => {
               <p className="text-xl font-semibold">Lorem ipsum</p>
             </div>
           </div>
-          <div className="flex flex-col items-center p-4 shadow-2xl bg-primary rounded-2xl h-80 justify-evenly w-80">
+          <div className="flex flex-col items-center gap-10 p-4 bg-transparent justify-evenly w-80">
             <img
               src={user1}
               alt="Shoes"
-              className="object-cover object-center w-24 h-24 rounded-full"
+              className="object-cover object-center w-40 h-40 border-2 rounded-full shadow-xl border-primary"
             />
-            <div className="flex flex-col items-center gap-5 text-lg text-center">
+            <div className="flex flex-col items-center gap-4 text-lg text-center">
               <p className="text-sm">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit, Lorem
                 ipsum dolor sit, amet consectetur adipisicing elit
