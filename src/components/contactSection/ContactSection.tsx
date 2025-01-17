@@ -1,3 +1,8 @@
+import mail from "../../assets/mail-white.svg";
+import map from "../../assets/map-pin-white.svg";
+import phone from "../../assets/phone-white.svg";
+import store from "../../assets/building-store.svg";
+
 const ContactSection = () => {
   return (
     <div className="h-[800px] bg-cover bg-center bg-[url('assets/contact_bg.jpg')] relative">
@@ -39,12 +44,62 @@ const ContactSection = () => {
                   placeholder="Cuéntanos tu problema"
                 ></textarea>
               </form>
-              <button className="py-3 font-semibold text-white transition-all rounded-md shadow-2xl bg-primary-light px-7 hover:bg-primary">
+              <button className="py-3 font-semibold text-white transition-all shadow-2xl rounded-xl bg-primary-light px-7 hover:bg-primary">
                 Enviar
               </button>
             </div>
           </div>
-          <div className="w-1/3 h-full bg-gradient-to-b from-white to-transparent backdrop-blur-md"></div>
+          <div className="flex items-center justify-center w-1/3 h-full px-10 py-14 bg-gradient-to-b from-white to-transparent backdrop-blur-md">
+            <div className="flex flex-col items-start justify-start w-full h-full gap-10">
+              <p className="text-3xl font-semibold">Contácto</p>
+              <div className="flex flex-col gap-8">
+                <div className="flex items-center gap-4">
+                  <img
+                    src={map}
+                    alt=""
+                    className="p-3 rounded-full bg-primary"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-lg font-medium">Dirección</p>
+                    <p>Sarmiento 512</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <img
+                    src={phone}
+                    alt=""
+                    className="p-3 rounded-full bg-primary"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-lg font-medium">Teléfonos</p>
+                    <p>+54 9 3858 156235</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <img
+                    src={mail}
+                    alt=""
+                    className="p-3 rounded-full bg-primary"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-lg font-medium">Email</p>
+                    <p>ejemplo@gmail.com</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <img
+                    src={store}
+                    alt=""
+                    className="p-3 rounded-full bg-primary"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-lg font-medium">Horarios de Atención</p>
+                    <p>Lunes a Viernes: 8:00 am - 5:00 pm</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
