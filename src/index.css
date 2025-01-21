@@ -5,4 +5,14 @@
 #root {
   min-height: 100dvh;
   overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.rfm-initial-child-container {
+  justify-content: space-around;
+  width: 100%;
+}
+
+.rfm-marquee {
+  justify-content: space-around;
 }

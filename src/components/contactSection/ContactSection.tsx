@@ -1,11 +1,41 @@
+import store from "../../assets/building-store.svg";
 import mail from "../../assets/mail-white.svg";
 import map from "../../assets/map-pin-white.svg";
 import phone from "../../assets/phone-white.svg";
-import store from "../../assets/building-store.svg";
 
 const ContactSection = () => {
+  // Enviar el formulario de contacto con Formsubmit
+  // Handle submit con fetch y useForm Hook
+  /* const onSubmit = (e) => {
+  e.preventDefault();
+  setIsLoading(true);
+
+  // Send data to email address
+  fetch('https://formsubmit.co/ajax/ale_lasarte@hotmail.com', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify(formState),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        setIsLoading(false);
+        setMessageModal(data.message);
+        handleClose();
+        onResetForm();
+      }
+    })
+    .catch((error) => console.log(error));
+}; */
+
   return (
-    <div className="h-[800px] bg-cover bg-center bg-[url('assets/contact_bg.jpg')] relative">
+    <div
+      className="h-[800px] bg-cover bg-center bg-[url('assets/contact_bg.jpg')] relative"
+      id="contact"
+    >
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-16 bg-opacity-50 shadow-xl bg-primary-dark">
         <div className="flex items-center justify-center w-2/3 h-[600px] border border-white/40">
           <div className="flex items-center justify-center w-2/3 h-full p-20 bg-gradient-to-b from-primary to-transparent backdrop-blur-md">
