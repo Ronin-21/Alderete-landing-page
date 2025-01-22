@@ -40,8 +40,12 @@ const ContactSection = () => {
         <div className="flex items-center justify-center w-2/3 h-[600px] border border-white/40">
           <div className="flex items-center justify-center w-2/3 h-full p-20 bg-gradient-to-b from-primary to-transparent backdrop-blur-md">
             <div className="flex flex-col items-start justify-center w-full h-full gap-6">
-              <p className="font-medium text-white uppercase">Contact us</p>
-              <p className="text-3xl font-semibold text-white">Get In Touch</p>
+              <p className="font-medium text-white uppercase font-title">
+                Contact us
+              </p>
+              <p className="text-3xl font-semibold text-white font-title">
+                Get In Touch
+              </p>
               <form className="flex flex-col w-full gap-6">
                 <div className="flex w-full h-10 gap-6">
                   <input
@@ -74,14 +78,14 @@ const ContactSection = () => {
                   placeholder="Cuéntanos tu problema"
                 ></textarea>
               </form>
-              <button className="py-3 font-semibold text-white transition-all shadow-2xl rounded-xl bg-primary-light px-7 hover:bg-primary">
+              <button className="py-3 font-semibold transition-all duration-200 ease-out shadow-2xl text-primary-dark bg-accent px-7 rounded-xl hover:bg-primary hover:text-white">
                 Enviar
               </button>
             </div>
           </div>
           <div className="flex items-center justify-center w-1/3 h-full px-10 py-14 bg-gradient-to-b from-white to-transparent backdrop-blur-md">
             <div className="flex flex-col items-start justify-start w-full h-full gap-10">
-              <p className="text-3xl font-semibold">Contácto</p>
+              <p className="text-3xl font-semibold font-title">Contácto</p>
               <div className="flex flex-col gap-8">
                 <div className="flex items-center gap-4">
                   <img

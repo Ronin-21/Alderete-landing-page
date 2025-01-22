@@ -50,7 +50,7 @@ const Footer = () => {
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
               repellat mollitia nobis minima id
             </p>
-            <button className="flex items-center justify-center gap-2 px-5 py-3 font-semibold text-white transition-all shadow-2xl rounded-xl bg-primary-light hover:bg-primary">
+            <button className="flex items-center justify-center gap-2 py-3 font-semibold transition-all duration-200 ease-out shadow-2xl text-primary-dark bg-accent px-7 rounded-xl hover:bg-primary hover:text-white">
               <img src={whatsapp} alt="" />
               <p>Contáctanos</p>
             </button>

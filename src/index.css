@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-primary;
+  }
+}
+
 #root {
   min-height: 100dvh;
   overflow: hidden;
