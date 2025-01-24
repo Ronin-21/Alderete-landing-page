@@ -5,21 +5,25 @@ const TestimonialsSection = () => {
     <div className="bg-gray-100 h-[700px] flex items-center justify-center">
       <div className="container flex flex-col items-center justify-center gap-20">
         <h4 className="text-5xl font-medium text-primary font-title">
-          Que dicen nuestros clientes
+          Lo que nuestros clientes dicen de nosotros
         </h4>
-        <div className="flex items-center justify-center w-full gap-10 text-black">
+        <div className="flex items-start justify-center w-full gap-10 text-black">
           <div className="flex flex-col items-center gap-10 p-4 bg-transparent justify-evenly w-80">
             <img
               src={user1}
               alt="Shoes"
               className="object-cover object-center w-40 h-40 border-2 rounded-full shadow-xl border-primary"
             />
-            <div className="flex flex-col items-center gap-4 text-lg text-center">
+            <div className="flex flex-col items-center gap-1 text-lg text-center">
               <p className="text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit, Lorem
-                ipsum dolor sit, amet consectetur adipisicing elit
+                “Gracias a Alderete Informática, hemos logrado automatizar
+                nuestros procesos y mejorar nuestra productividad en tiempo
+                récord. ¡Su equipo es excepcional!”
               </p>
-              <p className="text-xl font-semibold">Lorem ipsum</p>
+              <p className="mt-4 text-xl font-semibold">Juan Pérez</p>
+              <p className="text-sm text-gray-500">
+                Gerente de Operaciones, TechCorp
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-10 p-4 bg-transparent justify-evenly w-80">
@@ -28,12 +32,13 @@ const TestimonialsSection = () => {
               alt="Shoes"
               className="object-cover object-center w-40 h-40 border-2 rounded-full shadow-xl border-primary"
             />
-            <div className="flex flex-col items-center gap-4 text-lg text-center">
+            <div className="flex flex-col items-center gap-1 text-lg text-center">
               <p className="text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit, Lorem
-                ipsum dolor sit, amet consectetur adipisicing elit
+                “El soporte técnico que brindan es rápido y eficiente. Saber que
+                siempre están disponibles nos da tranquilidad total.”
               </p>
-              <p className="text-xl font-semibold">Lorem ipsum</p>
+              <p className="mt-4 text-xl font-semibold">María González</p>
+              <p className="text-sm text-gray-500">CEO, Innovate Solutions</p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-10 p-4 bg-transparent justify-evenly w-80">
@@ -42,12 +47,16 @@ const TestimonialsSection = () => {
               alt="Shoes"
               className="object-cover object-center w-40 h-40 border-2 rounded-full shadow-xl border-primary"
             />
-            <div className="flex flex-col items-center gap-4 text-lg text-center">
+            <div className="flex flex-col items-center gap-1 text-lg text-center">
               <p className="text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit, Lorem
-                ipsum dolor sit, amet consectetur adipisicing elit
+                “La seguridad de nuestros datos ha mejorado considerablemente
+                gracias a sus servicios. Recomiendo Alderete Informática a
+                cualquier empresa que valore la excelencia.”
               </p>
-              <p className="text-xl font-semibold">Lorem ipsum</p>
+              <p className="mt-4 text-xl font-semibold">Carlos Ramírez</p>
+              <p className="text-sm text-gray-500">
+                Director de IT, SecureTech
+              </p>
             </div>
           </div>
         </div>

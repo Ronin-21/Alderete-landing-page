@@ -11,8 +11,8 @@ const Home = () => {
     <div className="h-full">
       <Hero />
       <Banner />
-      <ServicesSection />
       <AboutSection />
+      <ServicesSection />
       <MidBanner />
       <TestimonialsSection />
       <ContactSection />

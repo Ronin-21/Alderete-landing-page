@@ -1,67 +1,60 @@
-import sitemapIcon from "../../assets/sitemap.svg";
+import engineIcon from "../../assets/engine.svg";
+import headphoneIcon from "../../assets/headset.svg";
+import lockIcon from "../../assets/lock.svg";
+import chartIcon from "../../assets/chart-line-arrow.svg";
 
 const MidBanner = () => {
   return (
     <div className="h-[600px] bg-cover bg-center bg-[url('assets/banner_1.jpg')] relative">
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-16 bg-opacity-80 bg-primary-dark">
         <p className="text-5xl font-semibold text-white">
-          Best Reasoned for choose our service
+          Por qué elegir nuestros servicios
         </p>
         <div className="flex items-center justify-around gap-10">
           <div className="flex flex-col items-center justify-center gap-3 text-white w-[300px] text-center">
-            <img
-              src={sitemapIcon}
-              alt=""
-              className="h-24 p-3 bg-white rounded-full"
-            />
-            <p className="text-xl font-medium">
-              Lorem ipsum dolor sit amet consectetur
-            </p>
+            <div className="h-24 p-3 bg-white rounded-full">
+              <img src={engineIcon} alt="" className="h-full" />
+            </div>
+            <p className="text-xl font-semibold">Soluciones Personalizadas</p>
             <p className="text-sm">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-              sequi dignissimos neque inventore ratione, officiis exercitationem
+              Creamos soluciones tecnológicas adaptadas a las necesidades
+              específicas de tu empresa, garantizando una integración eficiente
+              y sin complicaciones.
             </p>
           </div>
           <div className="flex flex-col items-center justify-center gap-3 text-white w-[300px] text-center">
-            <img
-              src={sitemapIcon}
-              alt=""
-              className="h-24 p-3 bg-white rounded-full"
-            />
-            <p className="text-xl font-medium">
-              Lorem ipsum dolor sit amet consectetur
-            </p>
+            <div className="h-24 p-3 bg-white rounded-full">
+              <img src={headphoneIcon} alt="" className="h-full" />
+            </div>
+            <p className="text-xl font-semibold">Soporte Técnico Continuo</p>
             <p className="text-sm">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-              sequi dignissimos neque inventore ratione, officiis exercitationem
+              Nuestro equipo está disponible 24/7 para solucionar cualquier
+              inconveniente y asegurarse de que tu infraestructura tecnológica
+              esté siempre funcionando al máximo.
             </p>
           </div>
           <div className="flex flex-col items-center justify-center gap-3 text-white w-[300px] text-center">
-            <img
-              src={sitemapIcon}
-              alt=""
-              className="h-24 p-3 bg-white rounded-full"
-            />
-            <p className="text-xl font-medium">
-              Lorem ipsum dolor sit amet consectetur
-            </p>
+            <div className="h-24 p-4 bg-white rounded-full">
+              <img src={lockIcon} alt="" className="h-full" />
+            </div>
+            <p className="text-xl font-semibold">Seguridad Garantizada</p>
             <p className="text-sm">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-              sequi dignissimos neque inventore ratione, officiis exercitationem
+              Implementamos las mejores prácticas de seguridad para proteger tus
+              datos y sistemas, asegurando la confidencialidad y la integridad
+              de tu información.
             </p>
           </div>
           <div className="flex flex-col items-center justify-center gap-3 text-white w-[300px] text-center">
-            <img
-              src={sitemapIcon}
-              alt=""
-              className="h-24 p-3 bg-white rounded-full"
-            />
-            <p className="text-xl font-medium">
-              Lorem ipsum dolor sit amet consectetur
+            <div className="h-24 p-4 overflow-hidden bg-white rounded-full">
+              <img src={chartIcon} alt="" className="h-full" />
+            </div>
+            <p className="text-xl font-semibold">
+              Optimización del Rendimiento
             </p>
             <p className="text-sm">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-              sequi dignissimos neque inventore ratione, officiis exercitationem
+              Mejoramos la eficiencia de tus sistemas y procesos, optimizando
+              los recursos y maximizando la productividad de tu empresa con
+              soluciones inteligentes.
             </p>
           </div>
         </div>
