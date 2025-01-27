@@ -46,15 +46,21 @@ const ContactSection = () => {
               <p className="text-3xl font-semibold text-white font-title">
                 Get In Touch
               </p>
-              <form className="flex flex-col w-full gap-6">
+              <form
+                className="flex flex-col w-full gap-6"
+                action="https://formspree.io/f/mldgjawq"
+                method="POST"
+              >
                 <div className="flex w-full h-10 gap-6">
                   <input
                     type="text"
+                    name="name"
                     placeholder="Nombre"
                     className="w-full p-3"
                   />
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email"
                     className="w-full p-3"
                   />
@@ -62,25 +68,36 @@ const ContactSection = () => {
                 <div className="flex w-full h-10 gap-6">
                   <input
                     type="text"
+                    name="phone"
                     placeholder="Teléfono"
                     className="w-full p-3"
                   />
                   <select className="w-full px-3">
-                    <option value="0">Selecciona un servicio</option>
-                    <option value="0">Flexxus</option>
-                    <option value="0">Alegra</option>
-                    <option value="0">WuBook</option>
-                    <option value="0">Fudo</option>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="flexxus">Flexxus</option>
+                    <option value="alegra">Alegra</option>
+                    <option value="wubook">WuBook</option>
+                    <option value="fudo">Fudo</option>
                   </select>
                 </div>
                 <textarea
+                  name="message"
                   className="h-32 p-3"
                   placeholder="Cuéntanos tu problema"
                 ></textarea>
+                <input type="hidden" name="_captcha" value="false"></input>
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="http://localhost:5173/"
+                ></input>
+                <button
+                  type="submit"
+                  className="self-start py-3 font-semibold transition-all duration-200 ease-out shadow-2xl text-primary-dark bg-accent px-7 rounded-xl hover:bg-primary hover:text-white"
+                >
+                  Enviar
+                </button>
               </form>
-              <button className="py-3 font-semibold transition-all duration-200 ease-out shadow-2xl text-primary-dark bg-accent px-7 rounded-xl hover:bg-primary hover:text-white">
-                Enviar
-              </button>
             </div>
           </div>
           <div className="flex items-center justify-center w-1/3 h-full px-10 py-14 bg-gradient-to-b from-white to-transparent backdrop-blur-md">
@@ -95,7 +112,7 @@ const ContactSection = () => {
                   />
                   <div className="flex flex-col">
                     <p className="text-lg font-medium">Dirección</p>
-                    <p>Sarmiento 512</p>
+                    <p>Ara Gral Belgrano 56</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -106,7 +123,7 @@ const ContactSection = () => {
                   />
                   <div className="flex flex-col">
                     <p className="text-lg font-medium">Teléfonos</p>
-                    <p>+54 9 3858 156235</p>
+                    <p>+54 9 3858 458253</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -117,7 +134,7 @@ const ContactSection = () => {
                   />
                   <div className="flex flex-col">
                     <p className="text-lg font-medium">Email</p>
-                    <p>ejemplo@gmail.com</p>
+                    <p>contacto@aldereteinformatica.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
