@@ -87,9 +87,12 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* <button className="py-3 font-semibold bg-white shadow-xl px-7 rounded-3xl text-primary">
-          Solicita una Cotización
-        </button> */}
+        <Link
+          to={"https://alderete-informatica.odoo.com/web/login"}
+          className="py-3 font-semibold bg-white shadow-xl px-7 rounded-3xl text-primary"
+        >
+          Login
+        </Link>
       </div>
     </div>
   );
