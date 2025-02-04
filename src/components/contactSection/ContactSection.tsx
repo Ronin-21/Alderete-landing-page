@@ -1,35 +1,42 @@
+import { useForm } from "react-hook-form";
 import store from "../../assets/building-store.svg";
 import mail from "../../assets/mail-white.svg";
 import map from "../../assets/map-pin-white.svg";
 import phone from "../../assets/phone-white.svg";
+import { useCreateLeadMutation } from "../../store/api/odooApi";
+
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  comment: string;
+};
 
 const ContactSection = () => {
-  // Enviar el formulario de contacto con Formsubmit
-  // Handle submit con fetch y useForm Hook
-  /* const onSubmit = (e) => {
-  e.preventDefault();
-  setIsLoading(true);
+  const { register, handleSubmit, reset } = useForm<FormData>();
+  const [createLead, { isLoading, isError, isSuccess }] =
+    useCreateLeadMutation();
 
-  // Send data to email address
-  fetch('https://formsubmit.co/ajax/ale_lasarte@hotmail.com', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify(formState),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.success) {
-        setIsLoading(false);
-        setMessageModal(data.message);
-        handleClose();
-        onResetForm();
-      }
-    })
-    .catch((error) => console.log(error));
-}; */
+  // Handle submit
+  const onSubmit = async (data: FormData) => {
+    try {
+      console.log("Data:", data);
+
+      await createLead({
+        name: data.name,
+        email_from: data.email,
+        phone: data.phone,
+        service: data.service,
+        description: data.comment,
+      }).unwrap();
+      alert("Contacto enviado con éxito");
+      reset();
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      alert("Hubo un error al enviar el formulario");
+    }
+  };
 
   return (
     <div
@@ -47,56 +54,57 @@ const ContactSection = () => {
                 Get In Touch
               </p>
               <form
+                onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col w-full gap-6"
-                action="https://formspree.io/f/mldgjawq"
-                method="POST"
               >
                 <div className="flex w-full h-10 gap-6">
                   <input
                     type="text"
-                    name="name"
                     placeholder="Nombre"
                     className="w-full p-3"
+                    {...register("name", { required: true })}
                   />
                   <input
                     type="email"
-                    name="email"
                     placeholder="Email"
                     className="w-full p-3"
+                    {...register("email", { required: true })}
                   />
                 </div>
                 <div className="flex w-full h-10 gap-6">
                   <input
                     type="text"
-                    name="phone"
                     placeholder="Teléfono"
                     className="w-full p-3"
+                    {...register("phone")}
                   />
-                  <select className="w-full px-3">
+                  <select
+                    className="w-full px-3"
+                    {...register("service", { required: true })}
+                  >
                     <option value="">Selecciona un servicio</option>
-                    <option value="flexxus">Flexxus</option>
-                    <option value="alegra">Alegra</option>
-                    <option value="wubook">WuBook</option>
-                    <option value="fudo">Fudo</option>
+                    <option value="flexxus_system">Flexxus</option>
+                    <option value="alegra_system">Alegra</option>
+                    <option value="wubook_system">WuBook</option>
+                    <option value="fudo_system">Fudo</option>
                   </select>
                 </div>
                 <textarea
-                  name="message"
                   className="h-32 p-3"
                   placeholder="Cuéntanos tu problema"
+                  {...register("comment")}
                 ></textarea>
-                <input type="hidden" name="_captcha" value="false"></input>
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="http://localhost:5173/"
-                ></input>
                 <button
                   type="submit"
                   className="self-start py-3 font-semibold transition-all duration-200 ease-out shadow-2xl text-primary-dark bg-accent px-7 rounded-xl hover:bg-primary hover:text-white"
+                  disabled={isLoading}
                 >
                   Enviar
                 </button>
+                {isSuccess && (
+                  <p className="text-green-600">Formulario enviado con éxito</p>
+                )}
+                {isError && <p className="text-red-600">Error al enviar</p>}
               </form>
             </div>
           </div>

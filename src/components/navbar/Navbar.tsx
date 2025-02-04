@@ -66,33 +66,39 @@ const Navbar = () => {
           onMouseLeave={() => {
             setOpen(false);
           }}
-          className={`absolute top-full right-0 px-7 py-5 bg-white rounded-b-lg gap-2 items-center justify-evenly shadow-lg w-[900px] h-48 transition-all ${
+          className={`absolute top-full left-0 translate-x-1/2 px-7 py-5 bg-white rounded-b-lg gap-2 items-center justify-evenly shadow-lg w-[900px] h-48 transition-all ${
             open ? "flex" : "hidden"
           }`}
         >
-          <Link to="/sistems/flexxus">
+          <Link to="/sistemas/flexxus">
             <img src={logoFlexxus} alt="logo flexxus" className="h-10" />
           </Link>
-          <Link to="/sistems/fudo">
+          <Link to="/sistemas/fudo">
             <img src={logoFudo} alt="logo fudo" className="h-8" />
           </Link>
-          <Link to="/sistems/alegra">
+          <Link to="/sistemas/alegra">
             <img src={logoAlegra} alt="logo alegra" className="h-10" />
           </Link>
-          <Link to="/sistems/wubook">
+          <Link to="/sistemas/wubook">
             <img src={logoWubook} alt="logo wubook" className="h-10 invert" />
           </Link>
-          <Link to="/sistems/facil-virtual">
+          <Link to="/sistemas/facil-virtual">
             <img src={logoFacil} alt="logo facil" className="h-10" />
           </Link>
         </div>
 
         <Link
+          to={"/login"}
+          className="py-2 font-semibold bg-white shadow-xl px-7 rounded-xl text-primary"
+        >
+          Login
+        </Link>
+        {/* <Link
           to={"https://alderete-informatica.odoo.com/web/login"}
           className="py-3 font-semibold bg-white shadow-xl px-7 rounded-3xl text-primary"
         >
           Login
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

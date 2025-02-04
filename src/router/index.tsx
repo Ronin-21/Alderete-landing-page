@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/home/Home";
+import Login from "../pages/login/Login";
 import Alegra from "../pages/sistems/Alegra";
 import FacilVirtual from "../pages/sistems/FacilVirtual";
 import Flexxus from "../pages/sistems/Flexxus";
@@ -17,11 +18,12 @@ export const router = createBrowserRouter(
     <Route path="/" element={<MainLayout />} errorElement={<Error404 />}>
       <Route path="*" element={<Error404 />} />
       <Route index element={<Home />} />
-      <Route path="/sistems/flexxus" element={<Flexxus />} />
-      <Route path="/sistems/alegra" element={<Alegra />} />
-      <Route path="/sistems/facil-virtual" element={<FacilVirtual />} />
-      <Route path="/sistems/wubook" element={<Wubook />} />
-      <Route path="/sistems/fudo" element={<Fudo />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/sistemas/flexxus" element={<Flexxus />} />
+      <Route path="/sistemas/alegra" element={<Alegra />} />
+      <Route path="/sistemas/facil-virtual" element={<FacilVirtual />} />
+      <Route path="/sistemas/wubook" element={<Wubook />} />
+      <Route path="/sistemas/fudo" element={<Fudo />} />
     </Route>
   )
 );
