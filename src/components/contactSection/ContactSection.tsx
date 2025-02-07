@@ -15,8 +15,7 @@ type FormData = {
 
 const ContactSection = () => {
   const { register, handleSubmit, reset } = useForm<FormData>();
-  const [createLead, { isLoading, isError, isSuccess }] =
-    useCreateLeadMutation();
+  const [createLead, { isLoading }] = useCreateLeadMutation();
 
   // Handle submit
   const onSubmit = async (data: FormData) => {
@@ -27,7 +26,7 @@ const ContactSection = () => {
         name: data.name,
         email_from: data.email,
         phone: data.phone,
-        service: data.service,
+        //service: data.service,
         description: data.comment,
       }).unwrap();
       alert("Contacto enviado con éxito");
@@ -101,10 +100,6 @@ const ContactSection = () => {
                 >
                   Enviar
                 </button>
-                {isSuccess && (
-                  <p className="text-green-600">Formulario enviado con éxito</p>
-                )}
-                {isError && <p className="text-red-600">Error al enviar</p>}
               </form>
             </div>
           </div>

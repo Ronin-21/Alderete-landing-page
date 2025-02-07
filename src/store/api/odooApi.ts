@@ -1,26 +1,32 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const db = "ronin-webdesign";
+//const username = "ale_lasarte@hotmail.com";
+const apiKey = "4976ff2229eddca2ef987f151a6336e7165265d1";
+
 export interface Leads {
   name: string;
   email_from: string;
   phone: string;
-  service: string;
+  //service: string;
   description: string;
 }
 
 export const odooApi = createApi({
   reducerPath: "odooApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://tuodoo.com/jsonrpc", // URL de tu Odoo
+    baseUrl: "http://localhost:5000/api/odoo", // URL de tu Odoo
+    //baseUrl: "https://ronin-webdesign.odoo.com/jsonrpc", // URL de tu Odoo
     prepareHeaders: (headers) => {
       headers.set("Content-Type", "application/json");
       return headers;
     },
+    credentials: "include", // Permite enviar cookies
   }),
   endpoints: (builder) => ({
     createLead: builder.mutation({
       query: (leadData: Leads) => ({
-        url: "",
+        url: "/lead",
         method: "POST",
         body: JSON.stringify({
           jsonrpc: "2.0",
@@ -29,9 +35,9 @@ export const odooApi = createApi({
             service: "object",
             method: "execute",
             args: [
-              "nombre_de_base", // Nombre de la base de datos de Odoo
+              db, // Nombre de la base de datos de Odoo
               2, // ID del usuario de Odoo
-              "clave_de_API", // Clave de la API de Odoo
+              apiKey, // Clave de la API de Odoo
               "crm.lead", // Modelo de Odoo
               "create", // Método de Odoo
               [
@@ -39,7 +45,7 @@ export const odooApi = createApi({
                   name: leadData.name,
                   email_from: leadData.email_from,
                   phone: leadData.phone,
-                  x_service: leadData.service, // Personalizado para Odoo
+                  //x_service: leadData.service, // Personalizado para Odoo
                   description: leadData.description,
                 },
               ],
@@ -50,19 +56,19 @@ export const odooApi = createApi({
       }),
     }),
     login: builder.mutation({
-      query: ({ db, username, password }) => ({
-        url: "",
+      query: ({ username, password }) => ({
+        url: "/login",
         method: "POST",
-        body: JSON.stringify({
+        body: {
           jsonrpc: "2.0",
           method: "call",
           params: {
-            service: "common",
-            method: "authenticate",
-            args: [db, username, password, {}], // Parámetros requeridos
+            db: db,
+            login: username,
+            password: password,
           },
           id: new Date().getTime(),
-        }),
+        },
       }),
     }),
   }),

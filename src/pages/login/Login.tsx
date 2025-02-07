@@ -12,18 +12,21 @@ const Login = () => {
 
   const onSubmit = async (formData: FormData) => {
     try {
+      console.log("Data:", formData);
+
       const response = await login({
-        db: "nombre_de_base", // Reemplázalo con el nombre de tu base de datos
         username: formData.username,
         password: formData.password,
       }).unwrap();
 
       if (response.result) {
-        // Guardamos la sesión por si la necesitas en el futuro
-        localStorage.setItem("userID", response.result);
+        // Guardar sesión en localStorage
+        localStorage.setItem("session_id", response.result.session_id);
 
-        // Redirigir a Odoo
-        window.location.href = `https://tuodoo.com/web?db=nombre_de_base`;
+        // Redirigir con la sesión activa
+        //window.location.href = `https://ronin-webdesign.odoo.com/web?session_id=${response.result.session_id}`;
+        window.location.href =
+          "https://ronin-webdesign.odoo.com/web/login?redirect=/my/home";
       } else {
         alert("Credenciales incorrectas");
       }
