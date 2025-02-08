@@ -25,8 +25,7 @@ const Login = () => {
 
         // Redirigir con la sesión activa
         //window.location.href = `https://ronin-webdesign.odoo.com/web?session_id=${response.result.session_id}`;
-        window.location.href =
-          "https://ronin-webdesign.odoo.com/web/login?redirect=/my/home";
+        window.location.href = "https://alderete-informatica.odoo.com/my/home";
       } else {
         alert("Credenciales incorrectas");
       }

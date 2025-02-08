@@ -18,7 +18,7 @@ app.use(express.json());
 app.post("/api/odoo/lead", async (req, res) => {
   try {
     const response = await axios.post(
-      "https://ronin-webdesign.odoo.com/jsonrpc",
+      "https://alderete-informatica.odoo.com/jsonrpc",
       req.body,
       {
         headers: { "Content-Type": "application/json" },
@@ -33,7 +33,7 @@ app.post("/api/odoo/lead", async (req, res) => {
 app.post("/api/odoo/login", async (req, res) => {
   try {
     const response = await axios.post(
-      "https://ronin-webdesign.odoo.com/web/session/authenticate",
+      "https://alderete-informatica.odoo.com/web/session/authenticate",
       req.body,
       {
         headers: { "Content-Type": "application/json" },

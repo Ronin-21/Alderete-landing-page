@@ -26,7 +26,7 @@ const ContactSection = () => {
         name: data.name,
         email_from: data.email,
         phone: data.phone,
-        //service: data.service,
+        service: data.service,
         description: data.comment,
       }).unwrap();
       alert("Contacto enviado con éxito");
